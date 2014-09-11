@@ -1,0 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+
+body {
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+  font-size: 1em;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.padded {
+  margin-top: 10em;
+}
+
+.header {
+  width: auto;
+  text-align: center;
+  margin-bottom: .5em;
+  font-size: 1.2em;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.header h1>a {
+  color: #39346b;
+}
+
+.container {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.post h1 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: .1em;
+  color: #d02a04;
+}
+
+.post h2 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0em;
+  color: #d02a04;
+}
+
+.post a {
+  color: #d02a04;
+}
+
+.post-date {
+  color: #567d4d;
+}
+
+.post .highlighttable {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eee;
+  border-radius: 5px;
+  font-family: 'Ubuntu Mono';
+}
+
+.post pre {
+  margin: 0;
+  font-family: 'Ubuntu Mono';
+}
+
+.post td.linenos {
+  color: #999;
+}
+
+.post td.code {
+  width: 100%;
+}
+
+.post code {
+  font-family: 'Ubuntu Mono';
+}
+
+.linenos {
+  font-family: 'Ubuntu Mono';
+}
+
+.dark {
+  color: #333;
+}
+
+.gray {
+  color: #666;
+}
+
+.light {
+  color: #999;
+}
+
+.purple {
+  color: #39346b;
+}
+
+.orange {
+  color: #d02a04;
+}
+
+.green {
+  color: #567d4d;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.thick {
+  font-weight: 300;
+}
+
+.text {
+  font-size: 2.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}

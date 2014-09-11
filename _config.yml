@@ -1,0 +1,9 @@
+title:        John Schaeffer
+tagline:      'John Schaeffer - Blog'
+description:  'Hello.'
+url:          http://blog.schaeffer.io
+version:      0.0.0
+markdown:     rdiscount
+permalink:    pretty
+highlighter: pygments
+paginate:     5
