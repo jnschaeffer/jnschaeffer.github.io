@@ -27,7 +27,7 @@ that implements `Comparable<T>` can be ordered and sorted simply by having that
 implementation.
 
 In Go we don't have this, of course. There are interfaces, and so we could
-implement a `Comparator` interface of our own, but without knowing if any
+implement a `Comparable` interface of our own, but without knowing if any
 two things we're comparing are of the same concrete type we're left with code
 that might not actually work. Take the following example:
 
@@ -37,19 +37,19 @@ package main
 
 import "fmt"
 
-type Comparator interface{
-    CompareTo(c Comparator) bool
+type Comparable interface{
+    CompareTo(c Comparable) bool
 }
 
 type MyInt int
 
-func (i MyInt) CompareTo(c Comparator) bool {
+func (i MyInt) CompareTo(c Comparable) bool {
     return i < c.(MyInt)
 }
 
 type MyString string
 
-func (s MyString) CompareTo(c Comparator) bool {
+func (s MyString) CompareTo(c Comparable) bool {
     return s < c.(MyString)
 }
 
@@ -67,7 +67,7 @@ last line, we're comparing a `MyInt` to a `MyString`. The code compiles, but
 when we run it the runtime panics:
 
 {% highlight text linenos=table %}
-    interface conversion: main.Comparator is main.MyString, not main.MyInt
+    interface conversion: main.Comparable is main.MyString, not main.MyInt
 {% endhighlight %}
 
 Not good. So where does that leave us? The answer, it turns out, is that it
