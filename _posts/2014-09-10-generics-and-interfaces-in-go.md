@@ -20,7 +20,7 @@ or a type that implements some interface (e.g. `SomeClass<E extends IFace>`).
 While the intent in the first case is obvious, the intent in the second case is
 more important here - we want any objects of type `E` to also have constraints
 on what it is they actually do. In effect, we try to define the problem at two
-ends. One one end, we have the abstract definition of `SomeClass`. On the other,
+ends. On one end, we have the abstract definition of `SomeClass`. On the other,
 we have its more concrete implementation in `E` as defined by `IFace`. Java's
 `Comparable<T>` is a good example of this approach: Objects may be of any type,
 but any object of a class that implements `Comparable<T>` can be ordered and
