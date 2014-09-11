@@ -18,13 +18,13 @@ In object-oriented programming, a function operating on generics will typically
 either operate on a stand-in for some single type (e.g. Java's `Iterator<E>`)
 or a type that implements some interface (e.g. `SomeClass<E extends IFace>`).
 While the intent in the first case is obvious, the intent in the second case is
-more important here: We want any objects of type `E` to also have constraints
+more important here - we want any objects of type `E` to also have constraints
 on what it is they actually do. In effect, we try to define the problem at two
-ends: the abstract definition of `SomeClass` and its more concrete
-implementation in `E` as defined by `IFace`. Java's `Comparable<T>` is a good
-example of this approach: Objects may be of any type, but any object of a class
-that implements `Comparable<T>` can be ordered and sorted simply by having that
-implementation.
+ends. One one end, we have the abstract definition of `SomeClass`. On the other,
+we have its more concrete implementation in `E` as defined by `IFace`. Java's
+`Comparable<T>` is a good example of this approach: Objects may be of any type,
+but any object of a class that implements `Comparable<T>` can be ordered and
+sorted simply by having that implementation.
 
 In Go we don't have this, of course. There are interfaces, and so we could
 implement a `Comparable` interface of our own, but without knowing if any
