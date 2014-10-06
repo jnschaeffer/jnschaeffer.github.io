@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
-
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:700,400);
 body {
   font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -60,33 +59,21 @@ a:active { text-decoration: none; }
   color: #567d4d;
 }
 
-.post .highlighttable {
+.post pre {
   border-style: solid;
   border-width: 1px;
   border-color: #eee;
   border-radius: 5px;
-  font-family: 'Ubuntu Mono';
-}
-
-.post pre {
-  margin: 0;
-  font-family: 'Ubuntu Mono';
-}
-
-.post td.linenos {
-  color: #999;
-}
-
-.post td.code {
-  width: 100%;
+  padding: .5em;
+  white-space: pre-wrap;       /* CSS 3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 .post code {
-  font-family: 'Ubuntu Mono';
-}
-
-.linenos {
-  font-family: 'Ubuntu Mono';
+  font-family: 'Inconsolata';
 }
 
 .dark {

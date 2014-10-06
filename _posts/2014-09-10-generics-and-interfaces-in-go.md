@@ -31,7 +31,7 @@ implement a `Comparable` interface of our own, but without knowing if any
 two things we're comparing are of the same concrete type we're left with code
 that might not actually work. Take the following example:
 
-{% highlight go linenos=table %}
+{% highlight go %}
 
 package main
 
@@ -66,7 +66,7 @@ It might be a simple program, but it illustrates the above point well. In the
 last line, we're comparing a `MyInt` to a `MyString`. The code compiles, but
 when we run it the runtime panics:
 
-{% highlight text linenos=table %}
+{% highlight text %}
     interface conversion: main.Comparable is main.MyString, not main.MyInt
 {% endhighlight %}
 
@@ -92,7 +92,7 @@ the way Java handles it). To put it in simpler terms, we're sorting on a list
 of objects with some defined ordering. Now in contrast to this we have Go's
 [`sort.Interface`](http://godoc.org/sort#Interface) type:
 
-{% highlight go linenos=table %}
+{% highlight go %}
 
 // A type, typically a collection, that satisfies sort.Interface can be sorted
 // by the routines in this package. The methods require that the elements of
@@ -123,7 +123,7 @@ using `sort.Interface` will find themselves rewriting `Len` and `Swap` for
 every slice they use (note that implementations already exist for `[]int` and
 `[]string`):
 
-{% highlight go linenos=table %}
+{% highlight go %}
 type MyIntSlice []int
 
 func (s MyIntSlice) Len() int {
@@ -163,7 +163,7 @@ to solve the problem. There's no reason we need to bind the notion of ordering
 and swapping to a slice of objects or the objects themselves. We can just as
 easily create a type synonym that implements the logic, or make a wrapper type:
 
-{% highlight go linenos=table %}
+{% highlight go %}
 
 package main
 
@@ -205,7 +205,7 @@ enables us to readily take advantage of another feature of Go: interface and
 struct composition. In Go, interfaces can be defined in terms of other
 interfaces, like so:
 
-{% highlight go linenos=table %}
+{% highlight go %}
 
 package main
 
@@ -244,7 +244,7 @@ of printing and all of the functionality of sorting in the same type. Better
 still, printing and sorting can come from different types that we can roll
 into one:
 
-{% highlight go linenos=table %}
+{% highlight go %}
 
 type MyIntPrinter struct {
     Vals []int
