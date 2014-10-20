@@ -67,7 +67,7 @@ last line, we're comparing a `MyInt` to a `MyString`. The code compiles, but
 when we run it the runtime panics:
 
 {% highlight text %}
-    interface conversion: main.Comparable is main.MyString, not main.MyInt
+interface conversion: main.Comparable is main.MyString, not main.MyInt
 {% endhighlight %}
 
 Not good. So where does that leave us? The answer, it turns out, is that it

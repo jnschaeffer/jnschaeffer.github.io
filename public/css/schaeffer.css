@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:700,400);
+@import url(http://fonts.googleapis.com/css?family=Cousine:400,700,400italic);
 body {
   font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,10 +45,11 @@ a:active { text-decoration: none; }
 }
 
 .post h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-top: 0;
   margin-bottom: .1em;
   color: #d02a04;
+  font-weight: 100;
 }
 
 .post a {
@@ -73,7 +74,12 @@ a:active { text-decoration: none; }
 }
 
 .post code {
-  font-family: 'Inconsolata';
+  font-family: 'Cousine';
+  font-size: 0.8em;
+}
+
+.post pre>code {
+  font-size: 1.0em;
 }
 
 .dark {
