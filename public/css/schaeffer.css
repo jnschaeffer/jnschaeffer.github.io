@@ -52,6 +52,14 @@ a:active { text-decoration: none; }
   font-weight: 100;
 }
 
+.post h3 {
+  font-size: 1.25em;
+  margin-top: 0;
+  margin-bottom: .1em;
+  color: #39346b;
+  font-weight: 100;
+}
+
 .post a {
   color: #d02a04;
 }

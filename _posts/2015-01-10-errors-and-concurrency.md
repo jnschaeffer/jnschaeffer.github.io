@@ -19,7 +19,7 @@ accomplish this, each of which has its own benefits and drawbacks.
 
 For this post, all code is available on [GitHub][2] in the `error-mux` package.
 
-## Example: Weather lookup service
+### Example: Weather lookup service
 
 We will be using a simple example weather service designed to look up
 temperatures for a given ZIP code. The weather service has three important
@@ -42,7 +42,7 @@ work with these effectively we will need to explore a few strategies for
 handling errors while rewriting the code to run concurrently. We will start by
 wrapping our utility function calls in anonymous function goroutines.
 
-## 1. Wrap each step in an anonymous function
+### 1. Wrap each step in an anonymous function
 
 This is the simplest and most naive approach, but certainly not the most
 robust, as we will soon see. The basic idea here is to take each step in our
@@ -100,7 +100,7 @@ memory by communicating, not to communicate by sharing memory.
 With these issues in mind, we can build a better solution that's more in line
 with best practices in Go (and programming in general).
 
-## 2. Return channels and check each one for errors
+### 2. Return channels and check each one for errors
 
 This time, the bulk of our refactoring will be in `getName` and `getTemp`, not
 `getWeather`. Instead of wrapping the function calls in `getWeather` in
@@ -195,7 +195,7 @@ repetition of `if err, open = ...; open` is less than ideal. As the number of
 concurrent tasks grows, so will the number of `if` statements. Fortunately, we
 can use the next (and final) approach discussed to fix this.
 
-## 3. Multiplex error channels and check the result
+### 3. Multiplex error channels and check the result
 
 Instead of overhauling any of our current functions, we'll be taking a bit of
 inspiration from the pipeline pattern here to handle our errors. The pipeline
@@ -281,7 +281,7 @@ error channel using the early termination technique described in the pipeline
 pattern post (e.g. a quit function to close the merged error channel). For the
 sake of brevity this is left as an exercise for any interested reader.
 
-## Moving forward
+### Moving forward
 
 In this post, we have looked at the problem of error handling in concurrent
 contexts and implemented logic to make concurrent error handling cleaner and
